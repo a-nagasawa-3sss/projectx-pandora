@@ -1,8 +1,7 @@
-"""TC-03 に対応する正常系テスト。"""
-
+"""TC-03 のテスト"""
 
 def test_get_delivery_returns_daily_records_in_date_order(client):
-    """TC-03: 指定期間のimpressions/clicks/conversionsが日付順に返却される。"""
+    """TC-03: 指定期間のimpressions/clicks/conversionsが日付順に返却されること。"""
     response = client.get("/campaigns/C001/delivery?from=2026-05-01&to=2026-05-31")
 
     assert response.status_code == 200
